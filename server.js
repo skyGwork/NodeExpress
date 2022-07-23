@@ -14,7 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const adminRoute = require('./router/admin');
 const shopRoute = require('./router/shop');
 
-//initiate imports
+//initiate imports with[PATH FILTER as /admin]
+
 app.use('/admin', adminRoute);
 app.use(shopRoute);
 
