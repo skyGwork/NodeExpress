@@ -27,7 +27,7 @@ app.use(shopRoute);
 //
 
 app.use((req, res, next) => {
-  res.sendFile(path.join(rootDir, 'views', '404.html'));
+  res.render('404');
 });
 
 //! LISTEN APP
