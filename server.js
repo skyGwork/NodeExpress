@@ -16,11 +16,15 @@ const rootDir = require('./util/path');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// default templating engine
+app.set('view engine', 'pug');
+app.set('views', 'views');
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin', adminRoute);
 app.use(shopRoute);
-// 
+//
 
 app.use((req, res, next) => {
   res.sendFile(path.join(rootDir, 'views', '404.html'));
