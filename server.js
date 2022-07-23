@@ -16,6 +16,9 @@ const shopRoute = require('./router/shop');
 
 const rootDir = require('./util/path');
 
+//static file css
+app.use(express.static(path.join(__dirname, 'public')));
+
 //initiate imports
 app.use('/admin', adminRoute);
 app.use(shopRoute);
