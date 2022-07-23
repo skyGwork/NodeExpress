@@ -3,16 +3,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const hostName = '127.0.0.1';
 
-app.use(bodyParser.urlencoded({ extended: false }));
-
 const adminRoute = require('./router/admin');
 const shopRoute = require('./router/shop');
 const rootDir = require('./util/path');
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //static file css
 app.use(express.static(path.join(__dirname, 'public')));
