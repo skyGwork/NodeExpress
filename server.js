@@ -14,13 +14,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const adminRoute = require('./router/admin');
 const shopRoute = require('./router/shop');
 
+const rootDir = require('./util/path');
+
 //initiate imports
 app.use('/admin', adminRoute);
 app.use(shopRoute);
 
 // 404 PAGE NOT FOUND
 app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, 'views', '404.html'));
+  res.sendFile(path.join(rootDir, 'views', '404.html'));
 });
 
 //! LISTEN APP
