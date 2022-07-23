@@ -12,8 +12,6 @@ const hostName = '127.0.0.1';
 const adminRoute = require('./router/admin');
 const shopRoute = require('./router/shop');
 
-const rootDir = require('./util/path');
-
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // default templating engine
