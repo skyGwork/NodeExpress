@@ -29,7 +29,7 @@ app.use('/', (req, res, next) => {
 });
 
 
-//*********************************
+//*********
 //_Handling different routes_ -->
 
 /*
