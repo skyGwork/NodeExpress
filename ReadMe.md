@@ -15,3 +15,5 @@
 `npm install --save-dev nodemon`
 
 `npm i express body-parser`
+
+`npm i pug`
