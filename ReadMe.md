@@ -8,6 +8,10 @@
 
 > [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js [Express Getting Started](https://expressjs.com/en/starter/installing.html)
 
-# settongs
+# settings
 
 `npm init -y` 
+
+`npm install --save-dev nodemon`
+
+`npm i express body-parser`
