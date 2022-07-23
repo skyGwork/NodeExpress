@@ -1,13 +1,15 @@
-// Basic setup
+// Express
 
 const express = require('express');
 const app = express();
+
 //app listening
 const PORT = process.env.PORT || 3000;
 const hostName = '127.0.0.1';
 
-// 04 limiting-middleware-execution-to-post-requests_
+//execution-of-post-requests
 const bodyParser = require('body-parser');
+
 //req.body
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -28,7 +30,7 @@ app.use('/', (req, res, next) => {
 
 
 //*********************************
-//03 _Handling different routes_ -->
+//_Handling different routes_ -->
 
 /*
 app.use('/', (req, res, next) => {
@@ -44,7 +46,9 @@ app.use('/product', (req, res, next) => {
   console.log('In another middleware!');
   res.send('<h1>The "Product" Page</h1>');
 });
-// home route at the end###
+
+//home route at the end###
+
 app.use('/', (req, res, next) => {
   console.log('In another middleware!');
   res.send('<h1>Hello from Express!</h1>');
@@ -52,7 +56,7 @@ app.use('/', (req, res, next) => {
 */
 
 //********************************
-//02  _some more example_
+// _some more example_
 
 /*
 app.use(function (req, res, next) {
@@ -73,7 +77,7 @@ app.use((req, res) => {
 */
 
 // *******************
-//01 res.send: in middleware
+//res.send: in middleware
 
 /*
 app.use((req, res, next) => {
