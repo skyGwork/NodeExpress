@@ -20,6 +20,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  padding: 100px;
   background-color: var(--backgroundColor);
   color: var(--textColor);
   font-family: var(--content);
