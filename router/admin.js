@@ -1,6 +1,4 @@
-// >basic setup
 const express = require('express');
-// for roiuter
 const router = express.Router();
 
 router.get('/add-product', (req, res, next) => {
