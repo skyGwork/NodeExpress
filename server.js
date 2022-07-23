@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 //initiate express
 const app = express();
+const path = require('path');
 //app listening
 const PORT = process.env.PORT || 3000;
 const hostName = '127.0.0.1';
@@ -19,7 +20,7 @@ app.use(shopRoute);
 
 // 404 PAGE NOT FOUND
 app.use((req, res, next) => {
-  res.status(404).send('<h1>Page not found</h1>');
+  res.sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
 //! LISTEN APP
