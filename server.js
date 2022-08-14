@@ -11,6 +11,7 @@ const hostName = '127.0.0.1';
 
 const adminRoute = require('./router/admin');
 const shopRoute = require('./router/shop');
+const pugRoute = require('./router/pug');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin', adminRoute);
 app.use(shopRoute);
+app.use(pugRoute);
 //
 
 app.use((req, res, next) => {
